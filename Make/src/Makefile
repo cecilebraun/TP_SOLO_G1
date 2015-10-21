@@ -1,0 +1,4 @@
+DESTDIR  = /usr/local
+
+
+
