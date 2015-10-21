@@ -1,0 +1,35 @@
+
+
+
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+
+        var data = google.visualization.arrayToDataTable([
+<!-- TO BE REPLACED -->
+          ['Presence', 'Semaine par Mois'],
+          ['LesRep',     4],
+          ['Ecolo',      2],
+          ['SRC',  3]
+        ]);
+
+        var options = {
+          title: 'Presence'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
